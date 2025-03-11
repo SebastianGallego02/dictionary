@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dictionaryReducer from "../redux/features/dictionarySlice";
+import historyReducer from "../redux/features/historySlice";
 import { dictionaryApi } from "./services/dictionaryApi";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
 export const store = configureStore({
   reducer: {
     dictionaryReducer,
+    historyReducer,
     [dictionaryApi.reducerPath]: dictionaryApi.reducer,
   },
   devTools: process.env.NODE_ENV !== "production",

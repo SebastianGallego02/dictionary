@@ -40,3 +40,8 @@ export interface DictionaryEntryProps {
         url: string;
     };
 }
+
+export interface FontOption {
+    name: string;
+    className: string;
+};
